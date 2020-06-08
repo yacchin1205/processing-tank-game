@@ -100,26 +100,26 @@ class Tank(object):
 
         if self.y-self.real_y < 0:
             for i in range(int(self._height / world.cell_size)):
-                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size), height - 1)][min(int((self.real_x - self._height/2) / world.cell_size) + i, width - 1)]:
+                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size), len(world.grid) - 1)][min(int((self.real_x - self._height/2) / world.cell_size) + i, len(world.grid[0]) - 1)]:
                     self.y = int((self.real_y - self._height/2) / world.cell_size) * world.cell_size + world.cell_size + self._height/2
                     continue
 
         if self.y-self.real_y > 0:
             for i in range(int(self._height / world.cell_size)):
-                if world.grid[min(int((self.real_y + self._height/2) / world.cell_size), height - 1)][min(int((self.real_x - self._height/2) / world.cell_size) + i, width - 1)]:
+                if world.grid[min(int((self.real_y + self._height/2) / world.cell_size), len(world.grid) - 1)][min(int((self.real_x - self._height/2) / world.cell_size) + i, len(world.grid[0]) - 1)]:
                     self.y = int((self.real_y + self._height/2) / world.cell_size) * world.cell_size - self._height/2
                     continue
 
 
         if self.x-self.real_x < 0:
             for i in range(int(self._height / world.cell_size)):
-                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size) + i, height - 1)][min(int((self.real_x - self._height/2) / world.cell_size), width - 1)]:
+                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size) + i, len(world.grid) - 1)][min(int((self.real_x - self._height/2) / world.cell_size), len(world.grid[0]) - 1)]:
                     self.x = int((self.real_x - self._height/2) / world.cell_size) * world.cell_size + world.cell_size + self._height/2
                     continue
 
         if self.x-self.real_x > 0:
             for i in range(int(self._height / world.cell_size)):
-                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size) + i, height - 1)][min(int((self.real_x + self._height/2) / world.cell_size), width - 1)]:
+                if world.grid[min(int((self.real_y - self._height/2) / world.cell_size) + i, len(world.grid) - 1)][min(int((self.real_x + self._height/2) / world.cell_size), len(world.grid[0]) - 1)]:
                     self.x = int((self.real_x + self._height/2) / world.cell_size) * world.cell_size - self._height/2
                     continue
 
