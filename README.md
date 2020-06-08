@@ -1,5 +1,5 @@
-# processing-tank-game
-A tank game made using Processing Python Mode. 
+# processing-tank-game [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yacchin1205/processing-tank-game/master)
+A tank game made using Processing Python Mode.
 
 Game logic by Arjo, Map generation by Renze
 
@@ -13,7 +13,7 @@ Game logic by Arjo, Map generation by Renze
 Tanks can shoot and build in a world that is procedurally generated
 
 ## Tank movement
-Tanks have collision with the environment and can aim independently from their wheel direction. 
+Tanks have collision with the environment and can aim independently from their wheel direction.
 
 Controls:
 - W: drive forward
@@ -34,5 +34,5 @@ Controls enemy tanks randomly
 - Gameover screen
 
 ## Tank health
-Tanks can be hit by bullets and their health will go down, both for the enemy tanks as for the player. 
+Tanks can be hit by bullets and their health will go down, both for the enemy tanks as for the player.
 Each tank has its own healthbar
