@@ -1,4 +1,4 @@
-from bullet import Bullet
+from .bullet import Bullet
 
 class Tank(object):
     def __init__(self, x, y, bullets, ui, is_player):
