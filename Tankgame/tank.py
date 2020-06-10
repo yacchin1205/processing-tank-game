@@ -60,6 +60,58 @@ class Tank(object):
 
         self.ui = ui
 
+    def copy(self):
+        t = Tank(self.x, self.y, [], None, self.is_player)
+        t.body_rot = self.body_rot
+        t.gun_rot = self.gun_rot
+
+        t._width = self._width
+        t._height = self._height
+
+        t.gun_width = self.gun_width
+        t.gun_height = self.gun_height
+
+        t.rot_width = self.rot_width
+        t.rot_height = self.rot_height
+
+        t.shoot_delay = self.shoot_delay
+        t.shoot_current = self.shoot_current
+        t.can_shoot = self.can_shoot
+        t.turn_speed = self.turn_speed
+        t.aim_speed = self.aim_speed
+        t.speed = self.speed
+        t.knockback = self.knockback
+
+        t.key_drive = self.key_drive
+        t.key_turn_left = self.key_turn_left
+        t.key_turn_right = self.key_turn_right
+        t.key_reverse = self.key_reverse
+        t.key_aim_left = self.key_aim_left
+        t.key_aim_right = self.key_aim_right
+        t.key_shoot = self.key_shoot
+        t.key_build = self.key_build
+
+        t.real_x = self.real_x
+        t.real_y = self.real_y
+        t.acceleration = self.acceleration
+
+        t.max_health = self.max_health
+        t.health = self.health
+        t.build_offset = self.build_offset
+        t.build_size = self.build_size
+        t.build_delay = self.build_delay
+        t.build_display_size = self.build_display_size
+
+        t.health_width = self.health_width
+        t.health_height = self.health_height
+        t.health_offset = self.health_offset
+
+        t.max_cooldown = self.max_cooldown
+        t.cooldown = self.cooldown
+        t.can_be_hit = self.can_be_hit
+
+        t.dead = self.dead
+        return t
 
     def update(self, world):
         if self.dead:

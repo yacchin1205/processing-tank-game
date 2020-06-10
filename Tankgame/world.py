@@ -7,6 +7,11 @@ class World(object):
 
         self.grid = []
 
+    def copy(self):
+        w = World(self.grid_width, self.grid_height, self.cell_size)
+        w.grid = [row.copy() for row in self.grid]
+        return w
+
     def create(self, radius, x, y):
         rect_start_x = x - radius // 2
         rect_start_y = y - radius // 2

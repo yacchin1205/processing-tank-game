@@ -8,6 +8,7 @@ class WrappedTank:
     def __init__(self, tank, is_hero):
         self.x = tank.x
         self.y = tank.y
+        self.dead = tank.dead
         if is_hero:
             self.body_rot = tank.body_rot
             self.gun_rot = tank.gun_rot
