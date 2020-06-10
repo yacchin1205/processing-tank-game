@@ -17,5 +17,8 @@ class Operation:
 
 # Tank AI - Nothing to do
 class TankAI:
+    def __init__(self, name='Unknown'):
+        self.name = name
+
     def perform(self, env):
         return [Operation() for h in env.heroes]
