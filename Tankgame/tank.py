@@ -166,9 +166,6 @@ class Tank(object):
             if self.health <= 0:
                 self.dead = True
 
-                if self.is_player:
-                    self.ui.state = self.ui.gameover
-
 
     def render(self, debug):
 
