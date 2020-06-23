@@ -1,1 +1,1 @@
-git+https://github.com/yacchin1205/jupyter-processing-pymatplotlib.git@8a1a5f19de1add6f57a9740fb24afebc7010d2fa
+git+https://github.com/yacchin1205/jupyter-processing-pymatplotlib.git@ecdd3a8c6120a124a1e4ee6c181a085a0986c015
