@@ -15,6 +15,23 @@ class Operation:
                 continue
             setattr(tank, attr, getattr(self, attr))
 
+# AI Manager
+class Manager:
+    def __init__(self):
+        self.logs = []
+
+    def reset(self):
+        self.logs = []
+
+    def log(self, world, heroes, enemies, bullets):
+        self.logs.append((world.copy(), [h.copy() for h in heroes], [e.copy() for e in enemies], [b.copy() for b in bullets]))
+
+    def get_frames(self):
+        count = 0
+        while len(self.logs) == 0 or (any([not t.dead for t in self.logs[-1][1]]) and any([not t.dead for t in self.logs[-1][2]])):
+            count += 1
+            yield count
+
 # Tank AI - Nothing to do
 class TankAI:
     def __init__(self, name='Unknown'):
